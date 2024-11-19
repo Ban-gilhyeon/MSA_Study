@@ -10,10 +10,10 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>second_service</artifactId>
+  <artifactId>ApiGateway-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>second_service</name>
-  <description>second_service</description>
+  <name>ApiGateway_service</name>
+  <description>ApiGateway_service</description>
   <url/>
   <licenses>
     <license/>
@@ -33,12 +33,18 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-gateway</artifactId>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-loadbalancer</artifactId>
     </dependency>
 
     <dependency>

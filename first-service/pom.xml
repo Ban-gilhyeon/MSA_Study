@@ -6,14 +6,14 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.5</version>
+    <version>3.2.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>user_service_MSA_Study</artifactId>
+  <artifactId>first-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>user_service_MSA_Study</name>
-  <description>user_service_MSA_Study</description>
+  <name>first_service</name>
+  <description>first_service</description>
   <url/>
   <licenses>
     <license/>
@@ -41,12 +41,6 @@
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
