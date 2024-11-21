@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/first_service/pom.xml" />
+        <option value="$PROJECT_DIR$/second_service/pom.xml" />
+        <option value="$PROJECT_DIR$/ApiGateway_service/pom.xml" />
+        <option value="$PROJECT_DIR$/user_service_MSA_Study/pom.xml" />
+        <option value="$PROJECT_DIR$/discovery_service_MSA_Study/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ApiGateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/second-service/pom.xml" />
+        <option value="$PROJECT_DIR$/first-service/pom.xml" />
+        <option value="$PROJECT_DIR$/discovery-service/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/user_service_MSA_Study/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
