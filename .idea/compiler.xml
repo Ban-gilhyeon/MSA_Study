@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="test-service" />
         <module name="first-service" />
         <module name="user-service" />
         <module name="ApiGateway-service" />
@@ -23,6 +24,7 @@
       <module name="discovery-service" options="-parameters" />
       <module name="first-service" options="-parameters" />
       <module name="second-service" options="-parameters" />
+      <module name="test-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="user_service_MSA_Study" options="-parameters" />
     </option>
