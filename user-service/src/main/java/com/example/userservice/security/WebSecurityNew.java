@@ -1,21 +1,16 @@
 package com.example.userservice.security;
 
 import com.example.userservice.service.UserService;
-import jakarta.servlet.Filter;
 import jakarta.servlet.http.HttpSession;
 import java.util.function.Supplier;
-import lombok.Builder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authorization.AuthorizationDecision;
-import org.springframework.security.config.annotation.SecurityBuilder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.Authentication;
@@ -28,9 +23,9 @@ import org.springframework.security.web.util.matcher.IpAddressMatcher;
 @Configuration
 @EnableWebSecurity
 public class WebSecurity {
-		private UserService userService;
-		private BCryptPasswordEncoder bCryptPasswordEncoder;
-		private Environment env;
+		private final UserService userService;
+		private final BCryptPasswordEncoder bCryptPasswordEncoder;
+		private final Environment env;
 
 		public static final String ALLOWED_IP_ADDRESS = "127.0.0.1";
 		public static final String SUBNET ="/32";
@@ -74,6 +69,8 @@ public class WebSecurity {
 			return new AuthorizationDecision(ALLOWED_ID_ADDRESS_MATCHER.matches(object.getRequest()));
 		}
 
-
+		private AuthenticationFilterNew getAuthenticationFilter(AuthenticationManager authenticationManager) throws Exception{
+			return new AuthenticationFilterNew(authenticationManager,userService,env);
+		}
 
 }
