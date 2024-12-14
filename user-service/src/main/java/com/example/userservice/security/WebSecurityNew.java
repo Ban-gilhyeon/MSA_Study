@@ -22,7 +22,7 @@ import org.springframework.security.web.util.matcher.IpAddressMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurity {
+public class WebSecurityNew {
 		private final UserService userService;
 		private final BCryptPasswordEncoder bCryptPasswordEncoder;
 		private final Environment env;
@@ -32,7 +32,7 @@ public class WebSecurity {
 		public static final IpAddressMatcher ALLOWED_ID_ADDRESS_MATCHER = new IpAddressMatcher(ALLOWED_IP_ADDRESS + SUBNET);
 
 
-		public WebSecurity(Environment env, UserService userService, BCryptPasswordEncoder bCryptPasswordEncoder) {
+		public WebSecurityNew(Environment env, UserService userService, BCryptPasswordEncoder bCryptPasswordEncoder) {
 			this.env = env;
 			this.userService = userService;
 			this.bCryptPasswordEncoder = bCryptPasswordEncoder;

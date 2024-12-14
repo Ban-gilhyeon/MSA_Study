@@ -15,15 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class SecondServiceController {
 	private final Environment env;
+	private final FirstServiceClient firstServiceClient;
 	@GetMapping("/welcome")
 	public String welcome() {
-		return "Welcome to SecondService!";
+		log.debug("Welcome to SecondServiceController");
+		return "Welcome to SecondService!" + firstServiceClient.welcome();
 	}
+
 	@GetMapping("/message")
 	public String message(@RequestHeader("second-request") String header) {
 		log.info(header);
 		return "Hello Second Service";
 	}
+
 	@GetMapping("/check")
 	public String check(HttpServletRequest request) {
 		log.info("Server Port ={}",request.getServerPort());
